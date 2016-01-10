@@ -11,7 +11,7 @@ if choice == 'd':
 elif choice == 'ei':
 	print "Title : " +video.Title
 	print "Rating : " +str(video.rating) 
-	print "View Count : " + str(video.viewcount) + "Author : " + video.author + "Length :" + str(video.length)
+	print "View Count : " + str(video.viewcount) + "Author : " + video.author + "Length :" + sstr(video.length)
 	print "Duration :" + str(video.duration) + "Likes : "+ str(video.likes) + "Dislikes : "+ str(video.dislikes)
 	print "Description : "+ video.description
 	print "Published on Date : " + str(video.published)

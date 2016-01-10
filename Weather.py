@@ -9,12 +9,12 @@ def getPublicIP():
 
 IP=str(getPublicIP)
 
-url = 'http://info.io/' + IP + '/json'
+url = 'https://info.io/' + IP + '/json'
 response=urlopen(url)
 data=json.load(response)
 city=data['city']
 
-response = urllib2.urlopen('http://api.openweathermap.org/data/2.5/weather?q=' + city)
+response = urllib2.urlopen('https://api.openweathermap.org/data/2.5/weather?q=' + city)
 data= json.load(response)
 print "Your City : " + city
 print "Current Weather : "+ str(data['main']['temp']-273)+ "C"
