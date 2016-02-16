@@ -4,7 +4,7 @@ import json
 from urllib2 import urlopen
 
 def getPublicIP():
-	data= str(urlopen('http//checkip.dyndns.com/').read())
+	data= str(urlopen('https://checkip.dyndns.com/').read())
 	return re.compile(r'Address : (\d+.\d+.\d+.\d+)').search(data).group(1)
 
 IP=str(getPublicIP)
