@@ -4,8 +4,8 @@ import os
 from os import *
 import cv2
 
-folder_path = "/home/rishabh/Downloads/lfw2/"
-destination_path="/home/rishabh/Downloads/images/"
+folder_path = "/home/rishabh/Documents/iAugmentor/test_data/lfw2/"
+destination_path="/home/rishabh/Documents/iAugmentor/test_data/images/"
 
 images_folder = listdir(folder_path)
 for folder in images_folder:
