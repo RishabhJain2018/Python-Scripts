@@ -4,7 +4,6 @@ import csv
 from random import randrange
 import random
 
-
 domain=['gmail', 'yahoo', 'hotmail', 'rediffmail']
 
 with open('final.csv', 'rb') as csvfile:
@@ -12,7 +11,6 @@ with open('final.csv', 'rb') as csvfile:
 	for line in csvfile.readlines():
 		names = line.split(',')
 		
-
 
 for i in range(0,100):
 	a=str(randrange(7,10))
@@ -22,7 +20,7 @@ for i in range(0,100):
 
 	name = names[i]
 	phone_no = a+b+c+d	
-	email = names[i].lower()+str(randrange(1111, 9999))+"@"+random.choice(domain)+".com"
+	email = names[i].lower()+str(randrange(1, 9999))+"@"+random.choice(domain)+".com"
 	values = {'name': name, 'email':email, 'phone_no':phone_no}
 
 	try:
