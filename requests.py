@@ -20,7 +20,6 @@ for i in range(0,100):
 	c=str(randrange(70,100))
 	d=str(randrange(111111, 999999))
 
-	# print a+b+c+d
 	name = names[i]
 	phone_no = a+b+c+d	
 	email = names[i].lower()+str(randrange(1111, 9999))+"@"+random.choice(domain)+".com"
@@ -31,20 +30,11 @@ for i in range(0,100):
 		data = urllib.urlencode(values)
 		req = urllib2.Request(url, data)
 		response= urllib2.urlopen(req)
-		print response.getcode()
+		print "i : ",response.getcode()
+
 	except urllib2.HTTPError as e:
 		if e.code == 404:
 			print "Error 404"
 		else:
 			body=response.read()
 			print body
-
-
-
-
-
-
-
-		
-
-		
