@@ -21,14 +21,17 @@ for i in range(0,100):
 	name = names[i]
 	phone_no = a+b+c+d	
 	email = names[i].lower()+str(randrange(1, 9999))+"@"+random.choice(domain)+".com"
-	values = {'name': name, 'email':email, 'phone_no':phone_no}
+	province = randrange(1,39)
+	course = randrange(1,9)
+	
+	values = {'name': name, 'phone':phone_no, 'email':email, 'province':province, 'couurse':course}
 
 	try:
 		url = "http://www.jbitdoon.com/index.php"
 		data = urllib.urlencode(values)
-		req = urllib2.Request(url, data)
-		response= urllib2.urlopen(req)
-		print "i : ",response.getcode()
+		request = urllib2.Request(url, data)
+		response = urllib2.urlopen(request)
+		print str(i)+" : ",response.getcode()
 
 	except urllib2.HTTPError as e:
 		if e.code == 404:
